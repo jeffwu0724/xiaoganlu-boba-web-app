@@ -29,19 +29,19 @@ app.post("/signup", function(req, res){
     ]
   };
   // const jonData = JSON.stringify(data);
-  // const url = "https://$API_SERVER.api.mailchimp.com/3.0/lists/417f414cd5";
+  // const url = "https://$API_SERVER.api.mailchimp.com/3.0/lists/********";
   // const options {
   //   method: "POST",
   // }
   // https.request(url, options, function(response))
 
   mailchimp.setConfig({
-   apiKey: "d59dc9b4342fb2de56fade924d945699-us5",
-   server: "us5",
+   apiKey: "****************",
+   server: "***",
  });
  async function run() {
 
-      const response = await mailchimp.lists.batchListMembers("417f414cd5", data);
+      const response = await mailchimp.lists.batchListMembers("***********", data);
       console.log(response);
       console.log(response.error_count);
       if(response.error_count != 0){
